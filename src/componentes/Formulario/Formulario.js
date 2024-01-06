@@ -11,16 +11,6 @@ const Formulario = (props) => {
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')    
 
-    const times = [
-        'Programaçao',
-        'Front-End',
-        'Data Science',
-        'DevOps',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const aoSalvar = (evento) => {
         evento.preventDefault();
         props.aoSalvar({
@@ -60,7 +50,7 @@ const Formulario = (props) => {
                     aoAlterado={valor => setTime(valor)}
                     obrigatorio={true}
                     label="Time"
-                    itens={times} 
+                    itens={props.times} 
                 />
                 <Botao>
                     Criar Card
